@@ -14,7 +14,7 @@ export class AppComponent {
 
   addTodo(evt: KeyboardEvent) {
     let input = evt.target as HTMLInputElement;
-    this.todos = [...this.todos, input.value];
+    this.todos = [...this.todos, { todo: this.todo, done: false }];
     input.value = '';
   }
 }
