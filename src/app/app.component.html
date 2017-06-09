@@ -21,7 +21,8 @@
       </li>
     </ul>
   </section>
-  <app-footer [todos]="todos"></app-footer>
+  <!--<app-footer [todos]="todos" (onClearCompleted)="clearCompleted($event)"></app-footer>-->
+  <app-footer [todos]="todos" (onClearCompleted)="clearCompleted($event)" #myFooter></app-footer>
 </section>
 <footer class="info">
   <p>Double-click to edit a todo</p>

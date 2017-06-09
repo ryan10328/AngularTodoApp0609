@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class FooterComponent implements OnInit, OnChanges {
   // moreThanFive: boolean;
+  constructor() { }
 
   // @Input('todos') myTodos: any[] = [];
   private _todos: any[] = [];
@@ -19,14 +20,21 @@ export class FooterComponent implements OnInit, OnChanges {
     this._todos = value;
   }
 
+  @Output() onClearCompleted = new EventEmitter();
 
-  constructor() { }
+  clearCompleted() {
+    this.onClearCompleted.emit();
+  }
 
   ngOnInit() {
   }
 
   ngOnChanges() {
     // this.moreThanFive = this.todos.length >= 5;
+  }
+
+  hello() {
+    console.log('Hello, Angular');
   }
 
 }
