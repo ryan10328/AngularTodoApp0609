@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   inputHint: string = 'What needs to be done??';
   colspan: number = 2;
+
+  todos: any[] = [];
+
+  addTodo(evt: KeyboardEvent) {
+    let input = evt.target as HTMLInputElement;
+
+    if (evt.keyCode === 13) {
+      this.todos = [...this.todos, input.value];
+      input.value = '';
+    }
+
+  }
 }
