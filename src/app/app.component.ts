@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   inputHint: string = 'What needs to be done??';
-
+  colspan: number = 2;
 }
