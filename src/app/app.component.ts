@@ -13,11 +13,7 @@ export class AppComponent {
 
   addTodo(evt: KeyboardEvent) {
     let input = evt.target as HTMLInputElement;
-
-    if (evt.keyCode === 13) {
-      this.todos = [...this.todos, input.value];
-      input.value = '';
-    }
-
+    this.todos = [...this.todos, input.value];
+    input.value = '';
   }
 }
