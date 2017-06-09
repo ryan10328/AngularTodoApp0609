@@ -9,6 +9,7 @@ export class AppComponent {
   inputHint: string = 'What needs to be done??';
   colspan: number = 2;
 
+  todo: string;
   todos: any[] = [];
 
   addTodo(evt: KeyboardEvent) {
