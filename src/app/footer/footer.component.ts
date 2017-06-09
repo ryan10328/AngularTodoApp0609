@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() todos: any[] = [];
+  @Input('todos') myTodos: any[] = [];
 
   constructor() { }
 
