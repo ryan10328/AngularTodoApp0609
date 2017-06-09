@@ -6,9 +6,19 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit, OnChanges {
-  moreThanFive: boolean;
+  // moreThanFive: boolean;
 
-  @Input('todos') myTodos: any[] = [];
+  // @Input('todos') myTodos: any[] = [];
+  private _todos: any[] = [];
+
+  get todos() {
+    return this._todos;
+  }
+
+  @Input() set todos(value) {
+    this._todos = value;
+  }
+
 
   constructor() { }
 
@@ -16,7 +26,7 @@ export class FooterComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.moreThanFive = this.myTodos.length >= 5;
+    // this.moreThanFive = this.todos.length >= 5;
   }
 
 }
