@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
 import { UpperPipe } from './upper.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     FooterComponent,
-    UpperPipe
+    UpperPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

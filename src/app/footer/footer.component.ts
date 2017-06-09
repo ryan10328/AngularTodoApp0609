@@ -22,6 +22,10 @@ export class FooterComponent implements OnInit, OnChanges {
 
   @Output() onClearCompleted = new EventEmitter();
 
+  @Output() onSelectTypeChanged = new EventEmitter();
+
+  selectType: string = 'all';
+
   clearCompleted() {
     this.onClearCompleted.emit();
   }
@@ -35,6 +39,11 @@ export class FooterComponent implements OnInit, OnChanges {
 
   hello() {
     console.log('Hello, Angular');
+  }
+
+  onSelectType(type) {
+    this.selectType = type;
+    this.onSelectTypeChanged.emit(type);
   }
 
 }
